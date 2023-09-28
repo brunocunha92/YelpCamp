@@ -51,10 +51,10 @@ app.use(mongoSanitize({
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
 
 const store = new MongoStore ({
-     mongoUrl: dbUrl,
-     secret,
-     touchAfter: 24 * 60 * 60,
- });
+    mongoUrl: dbUrl,
+    secret,
+    touchAfter: 24 * 60 * 60,
+});
 
 store.on("error", function(e) {
      console.log("Session Store Error", e)
